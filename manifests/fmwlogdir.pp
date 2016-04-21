@@ -20,7 +20,7 @@ define weblogic::fmwlogdir (
   $log_dir             = undef, # /data/logs
   )
   {
-    ::orawls::fmwlogdir {$name:
+    ::orawls::fmwlogdir { $name:
       middleware_home_dir => $::weblogic::middleware_home_dir, # /opt/oracle/middleware11gR1
       adminserver_address => $adminserver_address,
       adminserver_port    => $adminserver_port,

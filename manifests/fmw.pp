@@ -14,8 +14,7 @@ define weblogic::fmw(
   $healthcare           = false,
   $ohs_mode             = 'collocated',
   $oracle_inventory_dir = undef,
-  )
-  {
+  ) {
     ::orawls::fmw { $name:
       version              => $::weblogic::version,        # 1036|1111|1211|1212|1213|1221
       weblogic_home_dir    => $::weblogic::weblogic_home_dir,    # /opt/oracle/middleware11gR1/wlserver_103

@@ -23,5 +23,4 @@ define weblogic::bsu (
       remote_file         => $::weblogic::remote_file,  # true|false
       log_output          => $::weblogic::log_output, # true|false
     }
-
   }

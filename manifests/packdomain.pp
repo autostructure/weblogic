@@ -24,4 +24,3 @@ define weblogic::packdomain (
       log_output          => $::weblogic::log_output, # true|false
     }
   }
-}
