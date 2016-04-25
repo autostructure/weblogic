@@ -31,5 +31,6 @@ class weblogic::java {
     rsa_key_size_fix            => true,
     cryptography_extension_file => 'jce_policy-8.zip',
     source_path                 => $weblogic::source,
+    require                     => Package['unzip'],
   }
 }
