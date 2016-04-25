@@ -4,7 +4,7 @@
 # It sets variables according to platform.
 #
 class weblogic::params {
-  $version               = '1111' # 1036|1111|1211|1212|1213|1221
+  $version               = 1111   # 1036|1111|1211|1212|1213|1221
   $filename              = undef  # wls1036_generic.jar|wls1211_generic.jar|wls_121200.jar|wls_121300.jar|oepe-wls-indigo-installer-11.1.1.8.0.201110211138-10.3.6-linux32.bin
   $java_install_filename = undef
   $oracle_base_home_dir  = undef  # /opt/oracle
