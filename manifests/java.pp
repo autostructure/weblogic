@@ -7,6 +7,11 @@ class weblogic::java {
     ensure  => absent,
   }
 
+  # Ensure unzip is available
+  package { 'unzip':
+    ensure => present,
+  }
+
   # Figure our parameters from java install filename
   if $::weblogic::java_install_filename =~ /^jdk-(\d)u(\d\d)/ {
     $jdk_version_major = $1
