@@ -4,7 +4,7 @@
 #
 class weblogic::install {
   # Install weblogic
-  ::orawls::weblogic { $name:
+  ::orawls::weblogic { 'weblogic':
     version               => $weblogic::version,
     filename              => $weblogic::filename,              # wls1036_generic.jar|wls1211_generic.jar|wls_121200.jar|wls_121300.jar|oepe-wls-indigo-installer-11.1.1.8.0.201110211138-10.3.6-linux32.bin
     java_install_filename => $weblogic::java_install_filename, # jdk-8u74-linux-x64.tar.gz
