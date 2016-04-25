@@ -2,7 +2,7 @@
 #
 # install and configures the nodemanager
 #
-define orawls::nodemanager (
+define weblogic::nodemanager (
   $domain_name                           = undef,
   $nodemanager_port                      = 5556,
   $nodemanager_address                   = undef,
@@ -23,6 +23,11 @@ define orawls::nodemanager (
     $ohs_standalone                        = false,
     )
     {
+      # Must include domain_name
+      unless $domain_name {
+        fail('A nodemanager must be associated with a domain.')
+      }
+
       ::orawls::nodemanager { $name:
         domain_name                           => $domain_name,
         version                               => $::weblogic::version,  # 1036|1111|1211|1212|1213

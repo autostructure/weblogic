@@ -8,7 +8,7 @@ class weblogic::java {
   }
 
   # Figure our parameters from java install filename
-  if $::weblogic::jdk_version =~ /^jdk-(\d)u(\d\d)/ {
+  if $::weblogic::java_install_filename =~ /^jdk-(\d)u(\d\d)/ {
     $jdk_version_major = $1
     $jdk_version_minor = $2
   }
