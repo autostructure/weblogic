@@ -13,10 +13,10 @@
 class weblogic (
   Integer $version                    = $::weblogic::params::version,
   String $filename                    = $::weblogic::params::filename,             # wls1036_generic.jar|wls1211_generic.jar|wls_121200.jar|wls_121300.jar|oepe-wls-indigo-installer-11.1.1.8.0.201110211138-10.3.6-linux32.bin
-  String $java_install_filename       = $::weblogic::params::java_install_filename, # jdk-8u74-linux-x64.tar.gz
+  $java_install_filename              = $::weblogic::params::java_install_filename, # jdk-8u74-linux-x64.tar.gz
   String $oracle_base_home_dir        = $::weblogic::params::oracle_base_home_dir, # /opt/oracle
   String $middleware_home_dir         = $::weblogic::params::middleware_home_dir,  # /opt/oracle/middleware11gR1
-  String $weblogic_home_dir           = $::weblogic::params::weblogic_home_dir,    # /opt/oracle/middleware11gR1/wlserver
+  $weblogic_home_dir                  = $::weblogic::params::weblogic_home_dir,    # /opt/oracle/middleware11gR1/wlserver
   String $wls_domains_dir             = $::weblogic::params::wls_domains_dir,      # /opt/oracle/wlsdomains/domains
   String $wls_apps_dir                = $::weblogic::params::wls_apps_dir,         # /opt/oracle/wlsdomains/applications
   Variant[Boolean, String] $fmw_infra = $::weblogic::params::fmw_infra,            # true|false 1212/1213/1221 option -> plain weblogic or fmw infra
