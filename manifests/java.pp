@@ -17,14 +17,14 @@ class weblogic::java {
   include ::jdk7
 
   ::jdk7::install7 { "jdk1.${jdk_version_major}.0_${jdk_version_minor}":
-    version                   => "${jdk_version_major}u${jdk_version_minor}" ,
-    fullVersion               => "jdk1.${jdk_version_major}.0_${jdk_version_minor}",
-    alternativesPriority      => 18000,
-    x64                       => true,
-    downloadDir               => $weblogic::download_dir,
-    urandomJavaFix            => true,
-    rsakeySizeFix             => true,
-    cryptographyExtensionFile => 'UnlimitedJCEPolicyJDK7.zip',
-    sourcePath                => $weblogic::source,
+    version                     => "${jdk_version_major}u${jdk_version_minor}" ,
+    full_version                => "jdk1.${jdk_version_major}.0_${jdk_version_minor}",
+    alternatives_priority       => 18000,
+    x64                         => true,
+    download_dir                => $weblogic::download_dir,
+    urandom_java_fix            => true,
+    rsakey_size_fix             => true,
+    cryptography_extension_file => 'UnlimitedJCEPolicyJDK7.zip',
+    source_path                 => $weblogic::source,
   }
 }
