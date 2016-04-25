@@ -23,7 +23,7 @@ class weblogic::java {
     x64                         => true,
     download_dir                => $weblogic::download_dir,
     urandom_java_fix            => true,
-    rsakey_size_fix             => true,
+    rsa_key_size_fix            => true,
     cryptography_extension_file => 'UnlimitedJCEPolicyJDK7.zip',
     source_path                 => $weblogic::source,
   }
