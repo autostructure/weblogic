@@ -146,7 +146,7 @@ define weblogic::domain (
     sleep                                 => 20, # default sleep time
     properties                            => {},
     ohs_standalone                        => false,
-    require                               => ::Orawls::Weblogic[$name],
+    require                               => ::Orawls::Domain[$name],
   }
 
   notify { "Nodemanager port ${nodemanager_port}": }
