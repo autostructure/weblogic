@@ -125,4 +125,25 @@ define weblogic::domain (
     trust_keystore_file         => $trust_keystore_file,
     trust_keystore_passphrase   => $trust_keystore_passphrase,
   }
+
+  ::weblogic::nodemanager { $name:
+    domain_name                           => $name,
+    nodemanager_port                      => $nodemanager_port,
+    nodemanager_address                   => $nodemanager_address,
+    nodemanager_secure_listener           => $nodemanager_secure_listener,
+    jsse_enabled                          => $jsse_enabled,
+    custom_trust                          => $custom_trust,
+    trust_keystore_file                   => $trust_keystore_file,
+    trust_keystore_passphrase             => $trust_keystore_passphrase,
+    custom_identity                       => $custom_identity,
+    custom_identity_keystore_filename     => $custom_identity_keystore_filename,
+    custom_identity_keystore_passphrase   => $custom_identity_keystore_passphrase,
+    custom_identity_alias                 => $custom_identity_alias,
+    custom_identity_privatekey_passphrase => $custom_identity_privatekey_passphrase,
+    log_dir                               => $log_dir, # /data/logs
+    log_file                              => 'nodemanager.log',
+    sleep                                 => 20, # default sleep time
+    properties                            => {},
+    ohs_standalone                        => false,
+  }
 }
