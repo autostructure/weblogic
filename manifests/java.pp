@@ -24,13 +24,14 @@ class weblogic::java {
   ::jdk7::install7 { "jdk1.${jdk_version_major}.0_${jdk_version_minor}":
     version                     => "${jdk_version_major}u${jdk_version_minor}" ,
     full_version                => "jdk1.${jdk_version_major}.0_${jdk_version_minor}",
+    java_homes                  => $::weblogic::jdk_home_dir,
     alternatives_priority       => 18000,
     x64                         => true,
-    download_dir                => $weblogic::download_dir,
+    download_dir                => $::weblogic::download_dir,
     urandom_java_fix            => true,
     rsa_key_size_fix            => true,
     cryptography_extension_file => 'jce_policy-8.zip',
-    source_path                 => $weblogic::source,
+    source_path                 => $::weblogic::source,
     require                     => Package['unzip'],
   }
 }
