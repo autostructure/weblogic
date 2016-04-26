@@ -146,4 +146,14 @@ define weblogic::domain (
     properties                            => {},
     ohs_standalone                        => false,
   }
+
+  orautils::nodemanagerautostart{ $name:
+    version                   => $::weblogic::version,
+    wl_home                   => $::weblogic::weblogic_home_dir,
+    user                      => $::weblogic::os_user,
+    jsse_enabled              => $jsse_enabled,
+    custom_trust              => $custom_trust,
+    trust_keystore_file       => $trust_keystore_file,
+    trust_keystore_passphrase => $trust_keystore_passphrase,
+  }
 }
