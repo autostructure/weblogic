@@ -108,4 +108,3 @@ define weblogic::domain (
       ohs_standalone_ssl_listen_port        => $ohs_standalone_ssl_listen_port,
     }
   }
-}
