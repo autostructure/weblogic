@@ -124,6 +124,7 @@ define weblogic::domain (
     custom_trust                => $custom_trust,
     trust_keystore_file         => $trust_keystore_file,
     trust_keystore_passphrase   => $trust_keystore_passphrase,
+    require                     => ::Orautils::Nodemanagerautostart[$name],
   }
 
   ::weblogic::nodemanager { $name:
@@ -145,9 +146,12 @@ define weblogic::domain (
     sleep                                 => 20, # default sleep time
     properties                            => {},
     ohs_standalone                        => false,
+    require                               => ::orawls::weblogic[$name],
   }
 
-  orautils::nodemanagerautostart{ $name:
+  notify { "Nodemanager port ${nodemanager_port}": }
+
+  ::orautils::nodemanagerautostart{ $name:
     version                   => $::weblogic::version,
     wl_home                   => $::weblogic::weblogic_home_dir,
     user                      => $::weblogic::os_user,
@@ -155,5 +159,6 @@ define weblogic::domain (
     custom_trust              => $custom_trust,
     trust_keystore_file       => $trust_keystore_file,
     trust_keystore_passphrase => $trust_keystore_passphrase,
+    require                   => ::Weblogic::Nodemanager[$name],
   }
 }
