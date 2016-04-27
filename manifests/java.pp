@@ -33,5 +33,6 @@ class weblogic::java {
     cryptography_extension_file => 'jce_policy-8.zip',
     source_path                 => $::weblogic::source,
     require                     => Package['unzip'],
+    before                      => Class['::orawls::weblogic'],
   }
 }
