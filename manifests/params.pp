@@ -13,7 +13,7 @@ class weblogic::params {
   $wls_domains_dir       = undef  # /opt/oracle/wlsdomains/domains
   $wls_apps_dir          = undef  # /opt/oracle/wlsdomains/applications
   $fmw_infra             = false  # true|false 1212/1213/1221 option -> plain weblogic or fmw infra
-  $jdk_home_dir          = $::weblogic::java::jdk_home  # /usr/java/jdk1.7.0_45
+  $jdk_home_dir          = undef  # /usr/java/jdk1.7.0_45
   $os_user               = undef  # oracle
   $os_group              = undef  # dba
   $download_dir          = undef  # /data/install

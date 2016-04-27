@@ -20,7 +20,7 @@ class weblogic (
   String $wls_domains_dir             = $::weblogic::params::wls_domains_dir,      # /opt/oracle/wlsdomains/domains
   String $wls_apps_dir                = $::weblogic::params::wls_apps_dir,         # /opt/oracle/wlsdomains/applications
   Variant[Boolean, String] $fmw_infra = $::weblogic::params::fmw_infra,            # true|false 1212/1213/1221 option -> plain weblogic or fmw infra
-  #String $jdk_home_dir                = $::weblogic::params::jdk_home_dir,         # /usr/java/jdk1.7.0_45
+  String $jdk_home_dir                = $::weblogic::params::jdk_home_dir,         # /usr/java/jdk1.7.0_45
   String $os_user                     = $::weblogic::params::os_user,              # oracle
   String $os_group                    = $::weblogic::params::os_group,             # dba
   String $download_dir                = $::weblogic::params::download_dir,         # /data/install
