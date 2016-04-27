@@ -24,7 +24,6 @@ class weblogic::java {
   ::jdk7::install7 { "jdk1.${jdk_version_major}.0_${jdk_version_minor}":
     version                     => "${jdk_version_major}u${jdk_version_minor}" ,
     full_version                => "jdk1.${jdk_version_major}.0_${jdk_version_minor}",
-    java_homes                  => '/usr/java',
     alternatives_priority       => 18000,
     x64                         => true,
     download_dir                => $::weblogic::download_dir,
