@@ -149,8 +149,6 @@ define weblogic::domain (
     require                               => ::Orawls::Domain[$name],
   }
 
-  notify { "Nodemanager port ${nodemanager_port}": }
-
   ::orautils::nodemanagerautostart{ $name:
     version                   => $::weblogic::version,
     wl_home                   => $::weblogic::weblogic_home_dir,
