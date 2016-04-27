@@ -18,6 +18,11 @@ class weblogic::java {
     $jdk_version_minor = $2
   }
 
+  # JDK HOME
+
+  $full_version = "jdk1.${jdk_version_major}.0_${jdk_version_minor}"
+  $jdk_home = "/usr/java/${full_version}"
+
   # include biedmond jdk7
   include ::jdk7
 
