@@ -13,7 +13,7 @@ class weblogic::install {
     wls_domains_dir      => $::weblogic::wls_domains_dir,       # /opt/oracle/wlsdomains/domains
     wls_apps_dir         => $::weblogic::wls_apps_dir,          # /opt/oracle/wlsdomains/applications
     fmw_infra            => $::weblogic::fmw_infra,             # true|false 1212/1213/1221 option -> plain weblogic or fmw infra
-    jdk_home_dir         => $::weblogic::jdk_home_dir,          # /usr/java/jdk1.7.0_45
+    jdk_home_dir         => $::weblogic::java::jdk_home_dir,          # /usr/java/jdk1.7.0_45
     os_user              => $::weblogic::os_user,               # oracle
     os_group             => $::weblogic::os_group,              # dba
     download_dir         => $::weblogic::download_dir,          # /data/install
