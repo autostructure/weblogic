@@ -8,9 +8,9 @@ class weblogic::java {
   }
 
   # Ensure unzip is available
-  package { 'unzip':
-    ensure => present,
-  }
+  #package { 'unzip':
+  #  ensure => present,
+  #}
 
   # Figure our parameters from java install filename
   #iif $::weblogic::java_install_filename =~ /^jdk-(\d)u(\d\d)/ {
