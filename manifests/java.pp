@@ -41,12 +41,12 @@ class weblogic::java {
   #}
 
 
-  file {'/vagrant/oracle_software/jdk-6u24-linux-x64.bin':
-    ensure => file,
-    mode   => 'a+x',
-  }
+  #file {'/vagrant/oracle_software/jdk-6u24-linux-x64.bin':
+  #  ensure => file,
+  #  mode   => 'a+x',
+  #}
 
-  exec {'/vagrant/oracle_software/jdk-6u24-linux-x64.bin':
-    creates => '/usr/java',
-  }
+  #exec {'/vagrant/oracle_software/jdk-6u24-linux-x64.bin':
+  #  creates => '/usr/java',
+  #}
 }
