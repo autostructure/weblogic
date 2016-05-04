@@ -16,6 +16,8 @@ define weblogic::fmw(
   $healthcare           = false,
   $ohs_mode             = 'collocated',
   $oracle_inventory_dir = undef,
+  $os_user              = $::weblogic::os_user,              # oracle
+  $os_group             = $::weblogic::os_group,             # dba
 ) {
   # Must include weblogic password
   unless $version {
@@ -37,8 +39,8 @@ define weblogic::fmw(
     fmw_file4            => $fmw_file4,
     bpm                  => $bpm,
     healthcare           => $healthcare,
-    os_user              => $::weblogic::os_user,              # oracle
-    os_group             => $::weblogic::os_group,             # dba
+    os_user              => $os_user,              # oracle
+    os_group             => $os_group,             # dba
     download_dir         => $download_dir,         # /data/install
     source               => $::weblogic::source,        # puppet:///modules/orawls/ | /mnt | /vagrant
     remote_file          => $::weblogic::remote_file,                              # true|false
