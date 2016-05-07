@@ -34,7 +34,7 @@ class weblogic::java {
     download_dir                => $::weblogic::download_dir,
     urandom_java_fix            => true,
     rsa_key_size_fix            => true,
-    cryptography_extension_file => 'jce_policy-8.zip',
+    cryptography_extension_file => 'UnlimitedJCEPolicyJDK7.zip',
     source_path                 => $::weblogic::source,
     require                     => Package['unzip'],
     before                      => Class['::orawls::weblogic'],
