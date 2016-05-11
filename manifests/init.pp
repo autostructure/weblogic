@@ -33,7 +33,6 @@ class weblogic (
 
   # validate parameters here
 
-  class { '::weblogic::java': } ->
   class { '::weblogic::install': } ->
   class { '::weblogic::config': } ~>
   class { '::weblogic::service': } ->
