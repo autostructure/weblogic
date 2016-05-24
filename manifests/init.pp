@@ -26,7 +26,7 @@ class weblogic (
   String $download_dir                = $::weblogic::params::download_dir,         # /data/install
   String $source                      = $::weblogic::params::source,               # puppet:///modules/orawls/ | /mnt | /vagrant
   Boolean $remote_file                = $::weblogic::params::remote_file,          # true|false
-  String $javaParameters              = $::weblogic::params::javaParameters,       # '-Dspace.detection=false'
+  String $java_parameters             = $::weblogic::params::java_parameters,       # '-Dspace.detection=false'
   Boolean $log_output                 = $::weblogic::params::log_output,           # true|false
   String $temp_directory              = $::weblogic::params::temp_directory,       # /tmp temporay directory for files extractions
 ) inherits ::weblogic::params {

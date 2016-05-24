@@ -19,7 +19,7 @@ class weblogic::params {
   $download_dir          = undef  # /data/install
   $source                = undef  # puppet:///modules/orawls/ | /mnt | /vagrant
   $remote_file           = true   # true|false
-  $javaParameters        = ''     # '-Dspace.detection=false'
+  $java_parameters       = ''     # '-Dspace.detection=false'
   $log_output            = false  # true|false
   $temp_directory        = '/tmp' # /tmp temporay directory for files extractions
 }

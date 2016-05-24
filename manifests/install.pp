@@ -19,7 +19,7 @@ class weblogic::install {
     download_dir         => $::weblogic::download_dir,          # /data/install
     source               => $::weblogic::source,                # puppet:///modules/orawls/ | /mnt | /vagrant
     remote_file          => $::weblogic::remote_file,           # true|false
-    javaParameters       => $::weblogic::javaParameters,        # '-Dspace.detection=false'
+    java_parameters      => $::weblogic::java_parameters,        # '-Dspace.detection=false'
     log_output           => $::weblogic::log_output,            # true|false
     temp_directory       => $::weblogic::temp_directory,        # /tmp temporay directory for files extractions
   }
