@@ -13,6 +13,7 @@ define weblogic::fmw(
   $fmw_file4            = undef,
   $download_dir         = $::weblogic::download_dir,         # /data/install
   $source               = $::weblogic::source,
+  $remote_file          = $::weblogic::remote_file,
   $bpm                  = false,
   $healthcare           = false,
   $ohs_mode             = 'collocated',
@@ -44,7 +45,7 @@ define weblogic::fmw(
     os_group             => $os_group,             # dba
     download_dir         => $download_dir,         # /data/install
     source               => $source,        # puppet:///modules/orawls/ | /mnt | /vagrant
-    remote_file          => $::weblogic::remote_file,                              # true|false
+    remote_file          => $remote_file,                              # true|false
     log_output           => $::weblogic::log_output,                             # true|false
     temp_directory       => $::weblogic::temp_directory,      # /tmp directory
     ohs_mode             => $ohs_mode,
