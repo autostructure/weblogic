@@ -32,9 +32,8 @@ class weblogic (
 ) inherits ::weblogic::params {
 
   # validate parameters here
+  contain ::weblogic::install
 
   class { '::weblogic::install': } ->
-  class { '::weblogic::config': } ~>
-  class { '::weblogic::service': } ->
   Class['::weblogic']
 }
