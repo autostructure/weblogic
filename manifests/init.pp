@@ -33,7 +33,4 @@ class weblogic (
 
   # validate parameters here
   contain ::weblogic::install
-
-  Class['::weblogic::install'] ->
-  Class['::weblogic']
 }
