@@ -22,5 +22,6 @@ class weblogic::install {
     java_parameters      => $::weblogic::java_parameters,        # '-Dspace.detection=false'
     log_output           => $::weblogic::log_output,            # true|false
     temp_directory       => $::weblogic::temp_directory,        # /tmp temporay directory for files extractions
-  }
+  } ->
+  Class['::weblogic::install']
 }
