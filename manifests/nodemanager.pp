@@ -20,7 +20,7 @@ define weblogic::nodemanager (
   $log_file                              = 'nodemanager.log',
   $sleep                                 = 20, # default sleep time
   $properties                            = {},
-    $ohs_standalone                        = false,
+  $ohs_standalone                        = false,
     )
     {
       # Must include domain_name
